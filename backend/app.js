@@ -13,6 +13,8 @@ mongoose.connect('mongodb://localhost:27017/hobbitholedb', {
   useNewUrlParser: true,
 });
 
+app.use('/user', require('./routes/user'));
+
 app.listen(PORT, () => {
   console.log(`Сервер запущен на "localhost:${PORT}"`);
 });
